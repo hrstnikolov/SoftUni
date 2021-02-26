@@ -1,0 +1,85 @@
+# 5 Truck Tour
+
+
+
+# 8 Crossroads
+pseudo code
+
+READ duration_green_light
+READ duration_free_window
+
+road = deque()
+passed_cars_counter = 0
+WHILE True:
+    READ line
+    if line = 'END'
+        break
+
+    if is_crashed:
+
+
+    if line = 'green'
+        green_time = dur...
+        free_time = dur...
+        WHILE green_time > 0 and road:
+            car = road.pop
+            time_to_pass = len(car)
+            if time_to_pass > green_time:
+                green_time -= time_to_pass
+                passed_cars_counter += 1
+            else:
+                remaining_time = time_to_pass - green_time
+                if remaining_time >= free_time:
+                    break
+                else:
+                    pos = -(remaining_time - free_time)
+                    hit_char = car[pos]
+                    is_crashed = True
+    else
+        car = line
+        APPEND car to road
+
+# 9 Key Revolver
+
+READ:
+price_per_bullet
+gun_barrel_size
+bullet_sizes_stack
+lock_sizes_queue
+value_of_intelligence
+
+bullets_in_barrel = gun_barrel_size
+WHILE lock_sizes_queue:
+    IF not bullet_sizes_stack:
+        PRINT "Couldn't get through. Locks left: {locks_left}"
+        break
+    bullet = bullet_sizes_stack.pop()
+    lock = lock_sizes_queue[0]
+    IF bullet <= lock:
+        PRINT "Bang!"
+        lock_sizes_queue.popleft()
+    ELSE
+        PRINT "Ping!"
+    bullets_in_barrel -= 1
+    IF bullets_in_barrel == 0 and bullet_sizes_stack:
+        print "Reloading!"
+ELSE
+    PRINT "{bullets_left} bullets left. Earned ${money_earned}"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

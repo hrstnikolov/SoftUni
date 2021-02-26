@@ -1,0 +1,79 @@
+board, chess, square, capture, pair
+
+# ALGORITHM
+
+1. find all threatening_knights_pairs
+    threatening_knights_pairs = {
+    {(0,1),(2,2)},
+    {(0,3),(2,2)},
+    {(1,0),(2,2)},
+    {(1,4),(2,2)},
+}
+
+    1.0 read board: console input OR TEST_BOARD
+        read_board()
+        board
+        board_size
+
+    1.1 for each knight on the board check all 8 threatened squares for a knight
+                if there is, add pair to threatening_knights_pairs
+            current_square
+            find_threatening_knights_pairs(board)
+
+           1.1.1 verify the square coordinates are both between 0 <= coord < board_size
+               threatened_square
+               is_inside_board(threatened_square)
+
+
+2. find the square with the most occurrences in the threatening_knights_pairs
+    most_threatening_knight
+
+3. remove all pairs containing most_threatening_knight
+
+4. repeat steps 2 and 3 until threatening_knights_pairs is empty
+
+
+
+
+
+
+
+
+
+
+
+
+
+TEST_BOARDS = {
+    1: [
+        ['0', 'K', '0', 'K', '0'],
+        ['K', '0', '0', '0', 'K'],
+        ['0', '0', 'K', '0', '0'],
+        ['K', '0', '0', '0', 'K'],
+        ['0', 'K', '0', 'K', '0'],
+    ],
+    2: [
+        ['K', 'K'],
+        ['K', 'K'],
+    ],
+    3: [
+        ['0', 'K', '0', 'K', 'K', 'K', '0', '0'],
+        ['0', 'K', '0', '0', 'K', 'K', 'K', 'K'],
+        ['0', '0', 'K', '0', '0', '0', '0', 'K'],
+        ['K', 'K', 'K', 'K', 'K', 'K', '0', 'K'],
+        ['K', '0', 'K', '0', '0', '0', '0', 'K'],
+        ['K', 'K', '0', '0', '0', '0', '0', 'K'],
+        ['0', '0', 'K', '0', 'K', '0', '0', '0'],
+        ['0', '0', '0', 'K', '0', '0', 'K', 'K'],
+    ]
+}
+RELATIVE_POSITIONS = (
+    (1, 2),
+    (-1, 2),
+    (1, -2),
+    (-1, -2),
+    (2, 1),
+    (-2, 1),
+    (2, -1),
+    (-2, -1),
+)
