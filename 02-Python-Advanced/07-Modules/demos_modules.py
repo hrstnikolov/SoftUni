@@ -23,3 +23,6 @@ from random import shuffle as sh, choice as ch
 
 from math import *
 
+from numbersystem import decimalToHexa, decimalToOctal
+
+decimalToHexa()
