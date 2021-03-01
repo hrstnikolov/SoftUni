@@ -1,17 +1,13 @@
-# from math import log, e
-#
-#
-# def calc_log(argument, base):
-#     if base == 'natural':
-#         exponent = log(argument)
-#     else:
-#         exponent = log(argument, int(base))
-#
-#     return exponent
-#
-#
-# number = int(input())
-# base = input()
-# print(f'{calc_log(number, base):.2f}')
+from math import log
 
-print(format(15,'X'))
+
+def calculate_log(number, base):
+    if base == 'natural':
+        return log(number)
+    return log(number, int(base))
+
+
+number = int(input())
+base = input()
+print(format(calculate_log(number, base), '.2f'))
+
