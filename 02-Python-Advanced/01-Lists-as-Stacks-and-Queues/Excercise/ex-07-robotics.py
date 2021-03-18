@@ -61,7 +61,7 @@ while assembly_line:
         if r.time_left == 0:
             r.time_left = r.productivity
             product = assembly_line.popleft()
-            print(f'{r.name} - {product} [{timer}]')
+            print(f'{r.first_name} - {product} [{timer}]')
             break
     else:
         assembly_line.append(assembly_line.popleft())

@@ -38,13 +38,13 @@ class Guild:
 
     def is_player_name_in_guild(self, player_name):
         for p in self.players:
-            if player_name == p.name:
+            if player_name == p.first_name:
                 return True
         return False
 
     def get_player_index_by_name(self, player_name):
         for index, player in enumerate(self.players):
-            if player.name == player_name:
+            if player.first_name == player_name:
                 return index
 
     def assign_player(self, player: Player):

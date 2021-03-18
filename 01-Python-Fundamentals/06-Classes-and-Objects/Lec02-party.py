@@ -11,7 +11,7 @@ class Party:
         self.attendees.append(person)
 
     def names_of_attendees(self):
-        return ', '.join([person.name for person in self.attendees])
+        return ', '.join([person.first_name for person in self.attendees])
 
     def number_of_guests(self):
         return len(self.attendees)

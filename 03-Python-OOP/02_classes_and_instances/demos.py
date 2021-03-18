@@ -47,3 +47,10 @@
 # del murdjo.tricks
 # print(murdjo)
 
+class Person:
+    def __init__(self, name):
+        self.name = name
+
+
+p1 = Person()
+p2 = Person('asd')

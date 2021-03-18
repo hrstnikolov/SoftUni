@@ -43,7 +43,7 @@ class Section:
 
     def get_task_by_name(self, task_name):
         for task in self.tasks:
-            if task_name == task.name:
+            if task_name == task.first_name:
                 return task
 
     def add_task(self, new_task):
@@ -51,7 +51,7 @@ class Section:
             return f"Task is already in the section {self.name}"
         self.tasks.append(new_task)
         # return f"Task {new_task.name} is added to the section"
-        return f"Task Name: {new_task.name} - Due Date: {new_task.due_date} is added to the section"
+        return f"Task Name: {new_task.first_name} - Due Date: {new_task.due_date} is added to the section"
 
     def complete_task(self, task_name: str):
         task = self.get_task_by_name(task_name)
