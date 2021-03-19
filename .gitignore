@@ -1,3 +1,5 @@
 *.docx
 *.pptx
 *.xml
+*.zip
+__init__.py
