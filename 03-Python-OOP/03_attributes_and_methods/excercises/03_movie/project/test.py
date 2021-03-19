@@ -8,7 +8,7 @@ import unittest
 class TestsMovieWorld(unittest.TestCase):
     def test_customer_init(self):
         c = Customer("Pesho", 22, 1)
-        self.assertEqual(c.name, "Pesho")
+        self.assertEqual(c.milliliters, "Pesho")
         self.assertEqual(c.age, 22)
         self.assertEqual(c.id, 1)
 
@@ -18,7 +18,7 @@ class TestsMovieWorld(unittest.TestCase):
 
     def test_dvd_init(self):
         dvd = DVD("B", 1, 2020, "January", 10)
-        self.assertEqual(dvd.name, "B")
+        self.assertEqual(dvd.milliliters, "B")
         self.assertEqual(dvd.id, 1)
         self.assertEqual(dvd.creation_month, "January")
         self.assertEqual(dvd.creation_year, 2020)
@@ -40,7 +40,7 @@ class TestsMovieWorld(unittest.TestCase):
 
     def test_movie_init(self):
         movie = MovieWorld("Test")
-        self.assertEqual(movie.name, "Test")
+        self.assertEqual(movie.milliliters, "Test")
         self.assertEqual(movie.customers, [])
         self.assertEqual(movie.dvds, [])
 
