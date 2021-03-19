@@ -19,22 +19,23 @@
 * супер сочи към директния родител
 * child class = наследник ? 
 * single inheritance
-* ```python
-        # before py 3.5
-        # super(Student, self).__init__(name, age)
-
-        # after py 3.5
-        super().__init__(name, age)
 * overwriting 
   * създаване на клас в наследника със име
     дублиращо клас в родителя
-  * механизъм в други езици, в питон няма тчоно такова 
+  * механизъм в други езици, в питон няма тчоно такова
+* ако имаме дефинирани пропъертите или други методи
+с дублиращи се имена в родителя и наследника,
+при достъпване self.age ще се извика
+пропъртито на наследника;
+т.е. метода на наследника е с по-висок приоритет
+и замества метода на родителя
 
 # 3 Видове наследяване
 
-* child class, parent class
+* child class, parent class 
 * single inheritance = единично
 * multiple inheritance = множествено
+  понякога се получават колизии
 
 # 4 Клас Mixin
 
@@ -46,22 +47,6 @@
 * instantiate = инстанциране
     * класът се инстанцира (действие върху класа) = 
     т.е. създава се инстанция на класа
-```python
-class RadioMixin():
-   def play_song_on_station(self, station_frequency):
-       return f'playing song on radio frequency {station_frequency}'
-
-class Car(Vehicle, RadioMixin):
-    pass
-
-class Clock(RadioMixin):
-    pass
-
-```
-  
-
-
-
 
 
 
